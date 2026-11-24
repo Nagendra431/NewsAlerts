@@ -1,0 +1,6 @@
+{
+  "Name": "NewsAlerts",
+  "ProjectType": "Process",
+  "Description": "",
+  "MainFile": "Main.xaml"
+}

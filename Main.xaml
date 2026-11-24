@@ -1,0 +1,887 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:isactr="http://schemas.uipath.com/workflow/integration-service-activities/isactr" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:sxl="clr-namespace:System.Xml.Linq;assembly=System.Private.Xml.Linq" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uiascb="clr-namespace:UiPath.IntegrationService.Activities.SWEntities.C882C2EC4F2_summarise_Create.Bundle;assembly=C882C2EC4F2_summaris.f8CoL4dCLnB1NL2G64GlWLN1" xmlns:uiascb1="clr-namespace:UiPath.IntegrationService.Activities.SWEntities.C882C2EC4F2_v2_sub_generateChatCompletion_Create.Bundle;assembly=C882C2EC4F2_v2_sub_g.mPmhH1B16IH15wEzB362EV52" xmlns:umae="clr-namespace:UiPath.Mail.Activities.Enums;assembly=UiPath.Mail.Activities" xmlns:usau="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.Mail.Activities" xmlns:uwah="clr-namespace:UiPath.Web.Activities.Http;assembly=UiPath.Web.Activities" xmlns:uwahm="clr-namespace:UiPath.Web.Activities.Http.Models;assembly=UiPath.Web.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Models.FilterBuilder</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Models</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Helpers.TypeDetailsCustomization</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Activities</x:String>
+      <x:String>UiPath.Platform.Activities</x:String>
+      <x:String>UiPath.IntegrationService.Activities.SWEntities.C882C2EC4F2_v2_sub_generateChatCompletion_Create.Bundle</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Model</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>UiPath.Web.Activities.Http.Models</x:String>
+      <x:String>System.Net</x:String>
+      <x:String>UiPath.Web.Activities.Http</x:String>
+      <x:String>UiPath.Sdk.Activities</x:String>
+      <x:String>UiPath.Sdk.Activities.DependencyInjection.Contracts</x:String>
+      <x:String>UiPath.Sdk.Activities.DependencyInjection</x:String>
+      <x:String>UiPath.Web.Activities</x:String>
+      <x:String>System.Xml.XPath</x:String>
+      <x:String>System.Numerics</x:String>
+      <x:String>UiPath.IntegrationService.Activities.SWEntities.C882C2EC4F2_summarise_Create.Bundle</x:String>
+      <x:String>UiPath.Mail</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Mail.Enums</x:String>
+      <x:String>UiPath.Shared.Activities.Utils</x:String>
+      <x:String>UiPath.Mail.Activities.Enums</x:String>
+      <x:String>UiPath.Mail.SMTP.Activities</x:String>
+      <x:String>UiPath.Mail.Activities</x:String>
+      <x:String>UiPath.Activities.System.Orchestrator.Mail</x:String>
+      <x:String>Microsoft.Exchange.WebServices.Data</x:String>
+      <x:String>UiPath.Mail.Exchange</x:String>
+      <x:String>UiPath.Mail.Exchange.Activities</x:String>
+      <x:String>UiPath.Mail.Outlook.Activities</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.IntegrationService.Activities.Runtime</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>C882C2EC4F2_v2_sub_g.mPmhH1B16IH15wEzB362EV52</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.MetadataLoadContext</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.Net.WebClient</AssemblyReference>
+      <AssemblyReference>System.Net.Primitives</AssemblyReference>
+      <AssemblyReference>System.Net.HttpListener</AssemblyReference>
+      <AssemblyReference>System.Net.WebProxy</AssemblyReference>
+      <AssemblyReference>System.Net.NameResolution</AssemblyReference>
+      <AssemblyReference>System.Net.WebHeaderCollection</AssemblyReference>
+      <AssemblyReference>System.Net.Requests</AssemblyReference>
+      <AssemblyReference>System.Net.ServicePoint</AssemblyReference>
+      <AssemblyReference>NPOI.Core</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Private.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xml.XPath.XDocument</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>C882C2EC4F2_summaris.f8CoL4dCLnB1NL2G64GlWLN1</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.CodeDom</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>Microsoft.Exchange.WebServices</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <sap:WorkflowViewStateService.ViewState>
+    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+      <x:Boolean x:Key="ShouldCollapseAll">False</x:Boolean>
+    </scg:Dictionary>
+  </sap:WorkflowViewStateService.ViewState>
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="897.2,12547.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Name="dtArticles" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dtSettings" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dtSubscribers" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dtSources" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dtProcessed" />
+      <Variable x:TypeArguments="sxl:XDocument" Name="xDoc" />
+      <Variable x:TypeArguments="x:String" Name="rssXml" />
+      <Variable x:TypeArguments="scg:IEnumerable(sxl:XElement)" Name="xmlItems" />
+      <Variable x:TypeArguments="uwahm:HttpResponseSummary" Name="rssResponse" />
+      <Variable x:TypeArguments="x:String" Name="aiPrompt" />
+      <Variable x:TypeArguments="x:String" Name="aiResponse" />
+      <Variable x:TypeArguments="x:String" Name="articleSummary" />
+      <Variable x:TypeArguments="x:String" Name="articleMarkets" />
+      <Variable x:TypeArguments="x:String" Name="marketanalysis" />
+      <Variable x:TypeArguments="s:DateTime" Name="botStartTime" />
+      <Variable x:TypeArguments="x:String" Name="articleDescription" />
+      <Variable x:TypeArguments="s:DateTime" Name="publishedDate" />
+      <Variable x:TypeArguments="x:String" Name="articlePublished" />
+      <Variable x:TypeArguments="x:String" Name="articleTitle" />
+      <Variable x:TypeArguments="x:String" Name="articleLink" />
+      <Variable x:TypeArguments="x:String" Name="articleKey" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dtDelivery" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dtAudit" />
+      <Variable x:TypeArguments="x:Boolean" Name="isFirstRun" />
+      <Variable x:TypeArguments="scg:List(x:String)" Name="runProcessedArticleKeys" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ueab:ExcelProcessScopeX DisplayName="Managed Excel Process" ProcessMode="AlwaysCreateNew" ShowExcelWindow="False">
+      <ueab:ExcelProcessScopeX.Body>
+        <ActivityAction x:TypeArguments="ui:IExcelProcess">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Excel Operations">
+    <ueab:ExcelApplicationCard CreateNewFile="False" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="697.6,448" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ResizeWindow="None" WorkbookPath="Data\Settings.xlsx">
+      <ueab:ExcelApplicationCard.Body>
+        <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,220" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ueab:ReadRangeX DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="416,160" sap2010:WorkflowViewState.IdRef="ReadRangeX_1" Range="[Excel.Sheet(&quot;Settings&quot;).Range(&quot;A1:C20&quot;)]" SaveTo="[dtSettings]" />
+          </Sequence>
+        </ActivityAction>
+      </ueab:ExcelApplicationCard.Body>
+    </ueab:ExcelApplicationCard>
+    <ueab:ExcelApplicationCard AutoSave="False" CreateNewFile="False" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="697.6,448" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_2" ResizeWindow="None" WorkbookPath="Data\NewsSources.xlsx">
+      <ueab:ExcelApplicationCard.Body>
+        <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="ExcelSources" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,220" sap2010:WorkflowViewState.IdRef="Sequence_4">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ueab:ReadRangeX DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="416,160" sap2010:WorkflowViewState.IdRef="ReadRangeX_2" Range="[ExcelSources.Sheet(&quot;NewsSources&quot;).Range(&quot;A1:E20&quot;)]" SaveTo="[dtSources]" />
+          </Sequence>
+        </ActivityAction>
+      </ueab:ExcelApplicationCard.Body>
+    </ueab:ExcelApplicationCard>
+    <ueab:ExcelApplicationCard AutoSave="False" CreateNewFile="False" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="697.6,448" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_3" ResizeWindow="None" WorkbookPath="Data\Subscribers.xlsx">
+      <ueab:ExcelApplicationCard.Body>
+        <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="ExcelSubscribers" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,220" sap2010:WorkflowViewState.IdRef="Sequence_5">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ueab:ReadRangeX DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="416,160" sap2010:WorkflowViewState.IdRef="ReadRangeX_3" Range="[ExcelSubscribers.Sheet(&quot;Subscribers&quot;).Range(&quot;A1:F20&quot;)]" SaveTo="[dtSubscribers]" />
+          </Sequence>
+        </ActivityAction>
+      </ueab:ExcelApplicationCard.Body>
+    </ueab:ExcelApplicationCard>
+    <ueab:ExcelApplicationCard AutoSave="False" CreateNewFile="False" DisplayName="Read Delivery Log" sap:VirtualizedContainerService.HintSize="697.6,448" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_5" ResizeWindow="None" WorkbookPath="Data\DeliveryLog.xlsx">
+      <ueab:ExcelApplicationCard.Body>
+        <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="ExcelDelivery" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,220" sap2010:WorkflowViewState.IdRef="Sequence_21">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ueab:ReadRangeX DisplayName="Read Delivery Log" sap:VirtualizedContainerService.HintSize="416,160" sap2010:WorkflowViewState.IdRef="ReadRangeX_5" Range="[ExcelDelivery.Sheet(&quot;DeliveryLog&quot;).Range(&quot;A1:H50&quot;)]" SaveTo="[dtDelivery]" />
+          </Sequence>
+        </ActivityAction>
+      </ueab:ExcelApplicationCard.Body>
+    </ueab:ExcelApplicationCard>
+    <ueab:ExcelApplicationCard AutoSave="False" CreateNewFile="False" DisplayName="Read Audit Log" sap:VirtualizedContainerService.HintSize="697.6,448" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_6" ResizeWindow="None" WorkbookPath="Data\AuditLog.xlsx">
+      <ueab:ExcelApplicationCard.Body>
+        <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="ExcelAudit" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,220" sap2010:WorkflowViewState.IdRef="Sequence_22">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ueab:ReadRangeX DisplayName="Read Audit Log" sap:VirtualizedContainerService.HintSize="416,160" sap2010:WorkflowViewState.IdRef="ReadRangeX_6" Range="[ExcelAudit.Sheet(&quot;AuditLog&quot;).Range(&quot;A1:L300&quot;)]" SaveTo="[dtAudit]" />
+          </Sequence>
+        </ActivityAction>
+      </ueab:ExcelApplicationCard.Body>
+    </ueab:ExcelApplicationCard>
+    <Assign DisplayName="Initialize In-Memory Article Keys" sap:VirtualizedContainerService.HintSize="697.6,174.4" sap2010:WorkflowViewState.IdRef="Assign_RunProcessedArticleKeys">
+      <Assign.To>
+        <OutArgument x:TypeArguments="scg:List(x:String)">[runProcessedArticleKeys]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="scg:List(x:String)">[New List(Of String)()]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <Assign sap:VirtualizedContainerService.HintSize="697.6,174.4" sap2010:WorkflowViewState.IdRef="Assign_8">
+      <Assign.To>
+        <OutArgument x:TypeArguments="s:DateTime">[botStartTime]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="s:DateTime">[DateTime.Now]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <ui:LogMessage DisplayName="Log Live Mode Started" sap:VirtualizedContainerService.HintSize="697.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_LiveStart" Level="Info" Message="[&quot;LIVE MODE STARTED: articles published at or after &quot; &amp; botStartTime.ToUniversalTime().ToString(&quot;o&quot;)]" />
+    <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="True" DisplayName="While" sap:VirtualizedContainerService.HintSize="697.6,10109.6" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+      <ui:InterruptibleWhile.Body>
+        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="696,9988" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ueab:ExcelApplicationCard CreateNewFile="False" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="662.4,448" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_4" ResizeWindow="None" WorkbookPath="Data\ProcessedArticles.xlsx">
+            <ueab:ExcelApplicationCard.Body>
+              <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="ExcelProcessed" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,220" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ueab:ReadRangeX DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="416,160" sap2010:WorkflowViewState.IdRef="ReadRangeX_4" Range="[ExcelProcessed.Sheet(&quot;ProcessedArticles&quot;).Range(&quot;A1:N300&quot;)]" SaveTo="[dtProcessed]" />
+                </Sequence>
+              </ActivityAction>
+            </ueab:ExcelApplicationCard.Body>
+          </ueab:ExcelApplicationCard>
+          <Assign sap:VirtualizedContainerService.HintSize="662.4,174.4" sap2010:WorkflowViewState.IdRef="Assign_14">
+            <Assign.To>
+              <OutArgument x:TypeArguments="x:Boolean">[isFirstRun]</OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="x:Boolean">[(dtProcessed Is Nothing OrElse dtProcessed.Rows.Count = 0) AndAlso dtSettings IsNot Nothing AndAlso dtSettings.Columns.Contains("SettingName") AndAlso dtSettings.Columns.Contains("SettingValue") AndAlso dtSettings.AsEnumerable().Any(Function(r) r("SettingName").ToString.Trim.ToLowerInvariant = "baselineonfirstrun" AndAlso r("SettingValue").ToString.Trim.ToUpperInvariant = "TRUE")]</InArgument>
+            </Assign.Value>
+          </Assign>
+          <ui:LogMessage DisplayName="Log Poll Cycle Started" sap:VirtualizedContainerService.HintSize="662.4,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_PollCycle" Level="Info" Message="[&quot;POLL CYCLE STARTED: &quot; &amp; DateTime.Now.ToString(&quot;o&quot;)]" />
+          <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtSources]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="662.4,7517.6" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+            <ui:ForEachRow.Body>
+              <ActivityAction x:TypeArguments="sd:DataRow">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="660.8,7336" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <If Condition="[CurrentRow(&quot;Enabled&quot;).ToString.Trim.ToUpper = &quot;TRUE&quot;]" sap:VirtualizedContainerService.HintSize="627.2,7276" sap2010:WorkflowViewState.IdRef="If_1">
+                    <If.Then>
+                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="625.6,7056.8" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <uwah:NetHttpRequest BasicAuthPassword="{x:Null}" BasicAuthSecurePassword="{x:Null}" BasicAuthUsername="{x:Null}" BinaryPayload="{x:Null}" ClientCertPassword="{x:Null}" ClientCertPath="{x:Null}" ClientCertSecurePassword="{x:Null}" Cookies="{x:Null}" CustomNegotiatedAuthCredentials="{x:Null}" FilePath="{x:Null}" FormData="{x:Null}" Headers="{x:Null}" LocalFiles="{x:Null}" OAuthToken="{x:Null}" OutputFileName="{x:Null}" OutputFileTargetFolder="{x:Null}" Parameters="{x:Null}" PathResource="{x:Null}" ProxyConfiguration="{x:Null}" ResourceFiles="{x:Null}" TextPayload="{x:Null}" AuthenticationType="None" ContinueOnError="True" DisableSslVerification="False" DisplayName="HTTP Request" EnableCookies="True" FileOverwrite="AutoRename" FollowRedirects="True" FormDataParts="[New List (Of FormDataPart) From _&#xA;{&#xA;&#x9;New FileFormDataPart(),&#xA;&#x9;New BinaryFormDataPart(),&#xA;&#x9;New TextFormDataPart()&#xA;}]" sap:VirtualizedContainerService.HintSize="592,276.8" sap2010:WorkflowViewState.IdRef="NetHttpRequest_1" InitialDelay="500" MaxRedirects="3" MaxRetryAfterDelay="30000" Method="GET" Multiplier="2" PreferRetryAfterValue="True" RequestBodyType="None" RequestUrl="[CurrentRow(&quot;RSSUrl&quot;).ToString.Trim]" Result="[rssResponse]" RetryCount="3" RetryStatusCodes="[New List (Of System.Net.HttpStatusCode) From _&#xA;{&#xA;&#x9;System.Net.HttpStatusCode.RequestTimeout,&#xA;&#x9;System.Net.HttpStatusCode.TooManyRequests,&#xA;&#x9;System.Net.HttpStatusCode.InternalServerError,&#xA;&#x9;System.Net.HttpStatusCode.BadGateway,&#xA;&#x9;System.Net.HttpStatusCode.ServiceUnavailable,&#xA;&#x9;System.Net.HttpStatusCode.GatewayTimeout&#xA;}]" SaveRawRequestResponse="False" SaveResponseAsFile="False" TextPayloadContentType="application/json" TextPayloadEncoding="UTF-8" TlsProtocol="Automatic" UseJitter="True" UseOsNegotiatedAuthCredentials="True">
+                          <uwah:NetHttpRequest.TimeoutInMiliseconds>
+                            <InArgument x:TypeArguments="s:Nullable(x:Int32)">
+                              <Literal x:TypeArguments="s:Nullable(x:Int32)" Value="10000" />
+                            </InArgument>
+                          </uwah:NetHttpRequest.TimeoutInMiliseconds>
+                        </uwah:NetHttpRequest>
+                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="592,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;RSS FETCHED: &quot; &amp; CurrentRow(&quot;SourceName&quot;).ToString]" />
+                        <Assign sap:VirtualizedContainerService.HintSize="592,174.4" sap2010:WorkflowViewState.IdRef="Assign_1">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[rssXml]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">[If(rssResponse IsNot Nothing, rssResponse.TextContent, "")]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <Assign sap:VirtualizedContainerService.HintSize="592,174.4" sap2010:WorkflowViewState.IdRef="Assign_3">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="sxl:XDocument">[xDoc]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="sxl:XDocument">[If(String.IsNullOrWhiteSpace(rssXml), New System.Xml.Linq.XDocument(), System.Xml.Linq.XDocument.Parse(rssXml))]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <Assign sap:VirtualizedContainerService.HintSize="592,174.4" sap2010:WorkflowViewState.IdRef="Assign_4">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="scg:IEnumerable(sxl:XElement)">[xmlItems]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="scg:IEnumerable(sxl:XElement)">[xDoc.Descendants().Where(Function(e) e.Name.LocalName = "item" OrElse e.Name.LocalName = "entry")]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <ui:BuildDataTable DataTable="[dtArticles]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="592,92" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Title&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Link&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;PublishedAt&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
+                        <ui:ForEach x:TypeArguments="sxl:XElement" CurrentIndex="{x:Null}" DisplayName="For Each currentXElement" sap:VirtualizedContainerService.HintSize="592,5756" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[xmlItems]">
+                          <ui:ForEach.Body>
+                            <ActivityAction x:TypeArguments="sxl:XElement">
+                              <ActivityAction.Argument>
+                                <DelegateInArgument x:TypeArguments="sxl:XElement" Name="currentXElement" />
+                              </ActivityAction.Argument>
+                              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="590.4,5634.4" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <Assign sap:VirtualizedContainerService.HintSize="556.8,174.4" sap2010:WorkflowViewState.IdRef="Assign_5">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="x:String">[articleTitle]</OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="x:String">[If(CurrentXElement.Elements().FirstOrDefault(Function(e) e.Name.LocalName = "title") IsNot Nothing, CurrentXElement.Elements().First(Function(e) e.Name.LocalName = "title").Value, "")]</InArgument>
+                                  </Assign.Value>
+                                </Assign>
+                                <Assign sap:VirtualizedContainerService.HintSize="556.8,174.4" sap2010:WorkflowViewState.IdRef="Assign_6">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="x:String">[articleLink]</OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="x:String">[If(CurrentXElement.Elements().FirstOrDefault(Function(e) e.Name.LocalName = "link") IsNot Nothing, If(CurrentXElement.Elements().First(Function(e) e.Name.LocalName = "link").Attribute("href") IsNot Nothing, CurrentXElement.Elements().First(Function(e) e.Name.LocalName = "link").Attribute("href").Value, CurrentXElement.Elements().First(Function(e) e.Name.LocalName = "link").Value), "")]</InArgument>
+                                  </Assign.Value>
+                                </Assign>
+                                <Assign sap:VirtualizedContainerService.HintSize="556.8,174.4" sap2010:WorkflowViewState.IdRef="Assign_7">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="x:String">[articlePublished]</OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="x:String">[If(CurrentXElement.Elements().FirstOrDefault(Function(e) e.Name.LocalName = "pubDate" OrElse e.Name.LocalName = "published" OrElse e.Name.LocalName = "updated") IsNot Nothing, CurrentXElement.Elements().First(Function(e) e.Name.LocalName = "pubDate" OrElse e.Name.LocalName = "published" OrElse e.Name.LocalName = "updated").Value, "")]</InArgument>
+                                  </Assign.Value>
+                                </Assign>
+                                <Assign sap:VirtualizedContainerService.HintSize="556.8,174.4" sap2010:WorkflowViewState.IdRef="Assign_10">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="x:String">[articleDescription]</OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="x:String">[If(CurrentXElement.Elements().FirstOrDefault(Function(e) e.Name.LocalName = "description" OrElse e.Name.LocalName = "content" OrElse e.Name.LocalName = "summary") IsNot Nothing, CurrentXElement.Elements().First(Function(e) e.Name.LocalName = "description" OrElse e.Name.LocalName = "content" OrElse e.Name.LocalName = "summary").Value, "")]</InArgument>
+                                  </Assign.Value>
+                                </Assign>
+                                <Assign sap:VirtualizedContainerService.HintSize="556.8,174.4" sap2010:WorkflowViewState.IdRef="Assign_9">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="s:DateTime">[publishedDate]</OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="s:DateTime">[If(DateTime.TryParse(articlePublished, Nothing), DateTime.Parse(articlePublished).ToUniversalTime(), DateTime.MinValue)]</InArgument>
+                                  </Assign.Value>
+                                </Assign>
+                                <Assign sap:VirtualizedContainerService.HintSize="556.8,174.4" sap2010:WorkflowViewState.IdRef="Assign_13">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="x:String">[articleKey]</OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="x:String">[(CurrentRow("SourceID").ToString.Trim.ToLowerInvariant &amp; "|" &amp; If(articleLink.Trim &lt;&gt; "", articleLink.Trim.ToLowerInvariant, articleTitle.Trim.ToLowerInvariant))]</InArgument>
+                                  </Assign.Value>
+                                </Assign>
+                                <If Condition="[articleKey &lt;&gt; &quot;&quot; AndAlso publishedDate &lt;&gt; DateTime.MinValue AndAlso publishedDate &gt;= botStartTime.ToUniversalTime() AndAlso dtProcessed IsNot Nothing AndAlso dtProcessed.Columns.Contains(&quot;ArticleKey&quot;) AndAlso Not dtProcessed.AsEnumerable().Any(Function(r) r(&quot;ArticleKey&quot;).ToString.Trim.ToLowerInvariant = articleKey) AndAlso Not runProcessedArticleKeys.Contains(articleKey) AndAlso Not isFirstRun]" sap:VirtualizedContainerService.HintSize="556.8,4528" sap2010:WorkflowViewState.IdRef="If_3">
+                                  <If.Then>
+                                    <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="555.2,3628" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                                      <Sequence.Variables>
+                                        <Variable x:TypeArguments="x:String" Name="marketprompt" />
+                                      </Sequence.Variables>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="521.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[&quot;dtArticles row count: &quot; &amp; dtArticles.Rows.Count.ToString]" />
+                                      <ui:LogMessage DisplayName="Log Eligible Article" sap:VirtualizedContainerService.HintSize="521.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;ELIGIBLE ARTICLE: &quot; &amp; articleTitle &amp; &quot; | Published: &quot; &amp; articlePublished &amp; &quot; | Source: &quot; &amp; CurrentRow(&quot;SourceName&quot;).ToString]" />
+                                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="521.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[articleLink]" />
+                                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="521.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[articlePublished]" />
+                                      <isactr:ConnectorActivity Configuration="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" ConnectionId="597b9672-12ef-4761-9b45-aafe346148c2" DisplayName="Summarize Text" sap:VirtualizedContainerService.HintSize="521.6,428.8" sap2010:WorkflowViewState.IdRef="ConnectorActivity_3" UiPathActivityTypeId="d82ffa74-9757-317d-8c48-1a3a1b4be976">
+                                        <isactr:ConnectorActivity.FieldObjects>
+                                          <isactr:FieldObject Name="prompt" Type="FieldArgument">
+                                            <isactr:FieldObject.Value>
+                                              <InArgument x:TypeArguments="x:String">[articleTitle &amp; vbCrLf &amp; articleDescription]</InArgument>
+                                            </isactr:FieldObject.Value>
+                                          </isactr:FieldObject>
+                                          <isactr:FieldObject Name="detectInputLanguage" Type="FieldArgument">
+                                            <isactr:FieldObject.Value>
+                                              <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                                            </isactr:FieldObject.Value>
+                                          </isactr:FieldObject>
+                                          <isactr:FieldObject Name="outputLanguage" Type="FieldArgument" />
+                                          <isactr:FieldObject Name="modelName" Type="FieldArgument">
+                                            <isactr:FieldObject.Value>
+                                              <InArgument x:TypeArguments="x:String">gpt-5.1-2025-11-13</InArgument>
+                                            </isactr:FieldObject.Value>
+                                          </isactr:FieldObject>
+                                          <isactr:FieldObject Name="maxWordCount" Type="FieldArgument">
+                                            <isactr:FieldObject.Value>
+                                              <InArgument x:TypeArguments="x:Int64">1000</InArgument>
+                                            </isactr:FieldObject.Value>
+                                          </isactr:FieldObject>
+                                          <isactr:FieldObject Name="summaryFormat" Type="FieldArgument">
+                                            <isactr:FieldObject.Value>
+                                              <InArgument x:TypeArguments="x:String">Paragraph</InArgument>
+                                            </isactr:FieldObject.Value>
+                                          </isactr:FieldObject>
+                                          <isactr:FieldObject Name="Xminus_signElementsminus_signServiceminus_signProfile" Type="FieldArgument">
+                                            <isactr:FieldObject.Value>
+                                              <InArgument x:TypeArguments="x:String">high-capacity</InArgument>
+                                            </isactr:FieldObject.Value>
+                                          </isactr:FieldObject>
+                                          <isactr:FieldObject Name="out_summary" Type="FieldArgument">
+                                            <isactr:FieldObject.Value>
+                                              <OutArgument x:TypeArguments="x:String">[articleSummary]</OutArgument>
+                                            </isactr:FieldObject.Value>
+                                          </isactr:FieldObject>
+                                          <isactr:FieldObject Name="Jit_summarise" Type="FieldArgument">
+                                            <isactr:FieldObject.Value>
+                                              <OutArgument x:TypeArguments="uiascb:summarise_Create" />
+                                            </isactr:FieldObject.Value>
+                                          </isactr:FieldObject>
+                                        </isactr:ConnectorActivity.FieldObjects>
+                                      </isactr:ConnectorActivity>
+                                      <Assign sap:VirtualizedContainerService.HintSize="521.6,174.4" sap2010:WorkflowViewState.IdRef="Assign_11">
+                                        <Assign.To>
+                                          <OutArgument x:TypeArguments="x:String">[marketprompt]</OutArgument>
+                                        </Assign.To>
+                                        <Assign.Value>
+                                          <InArgument x:TypeArguments="x:String">["Analyze this financial news and its likely market impact. Do not invent facts. If evidence is insufficient, say Unclear." &amp; vbCrLf &amp; "Article title: " &amp; articleTitle &amp; vbCrLf &amp; "Article summary: " &amp; articleSummary &amp; vbCrLf &amp; "Article description: " &amp; articleDescription &amp; vbCrLf &amp; "Source link: " &amp; articleLink &amp; vbCrLf &amp; "Return exactly these fields: Relevant market: comma-separated market names; Direction: Bullish/Bearish/Mixed/Neutral/Unclear; Expected impact: High/Medium/Low/Unclear; Reason: 2-3 sentences; Confidence: High/Medium/Low. This is news interpretation, not a guaranteed price prediction."]</InArgument>
+                                        </Assign.Value>
+                                      </Assign>
+                                      <isactr:ConnectorActivity Configuration="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" ConnectionId="597b9672-12ef-4761-9b45-aafe346148c2" DisplayName="Content Generation" sap:VirtualizedContainerService.HintSize="521.6,424" sap2010:WorkflowViewState.IdRef="ConnectorActivity_5" UiPathActivityTypeId="aba52a00-4c05-318d-8f99-5ad924b2f277">
+                                        <isactr:ConnectorActivity.FieldObjects>
+                                          <isactr:FieldObject Name="prompt" Type="FieldArgument">
+                                            <isactr:FieldObject.Value>
+                                              <InArgument x:TypeArguments="x:String">[marketprompt]</InArgument>
+                                            </isactr:FieldObject.Value>
+                                          </isactr:FieldObject>
+                                          <isactr:FieldObject Name="isPIIEnabled" Type="FieldArgument">
+                                            <isactr:FieldObject.Value>
+                                              <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                                            </isactr:FieldObject.Value>
+                                          </isactr:FieldObject>
+                                          <isactr:FieldObject Name="isFilterPIIEnabled" Type="FieldArgument" />
+                                          <isactr:FieldObject Name="languageCode" Type="FieldArgument" />
+                                          <isactr:FieldObject Name="piiEntityCategories_array" Type="FieldArgument" />
+                                          <isactr:FieldObject Name="confidenceThreshold" Type="FieldArgument" />
+                                          <isactr:FieldObject Name="topK" Type="FieldArgument" />
+                                          <isactr:FieldObject Name="contextGrounding" Type="FieldArgument">
+                                            <isactr:FieldObject.Value>
+                                              <InArgument x:TypeArguments="x:String">None</InArgument>
+                                            </isactr:FieldObject.Value>
+                                          </isactr:FieldObject>
+                                          <isactr:FieldObject Name="_file" Type="FieldArgument" />
+                                          <isactr:FieldObject Name="folderKey" Type="FieldArgument" />
+                                          <isactr:FieldObject Name="topP" Type="FieldArgument" />
+                                          <isactr:FieldObject Name="indexID" Type="FieldArgument" />
+                                          <isactr:FieldObject Name="max_tokens" Type="FieldArgument" />
+                                          <isactr:FieldObject Name="temperature" Type="FieldArgument" />
+                                          <isactr:FieldObject Name="frequency_penalty" Type="FieldArgument" />
+                                          <isactr:FieldObject Name="numberOfResults" Type="FieldArgument" />
+                                          <isactr:FieldObject Name="presence_penalty" Type="FieldArgument" />
+                                          <isactr:FieldObject Name="n" Type="FieldArgument" />
+                                          <isactr:FieldObject Name="top_p" Type="FieldArgument" />
+                                          <isactr:FieldObject Name="_stop" Type="FieldArgument" />
+                                          <isactr:FieldObject Name="modelName" Type="FieldArgument">
+                                            <isactr:FieldObject.Value>
+                                              <InArgument x:TypeArguments="x:String">gpt-5.1-2025-11-13</InArgument>
+                                            </isactr:FieldObject.Value>
+                                          </isactr:FieldObject>
+                                          <isactr:FieldObject Name="instruction" Type="FieldArgument">
+                                            <isactr:FieldObject.Value>
+                                              <InArgument x:TypeArguments="x:String">You are a financial news analyst. Analyze only the supplied information. Do not invent facts or present predictions as guarantees.</InArgument>
+                                            </isactr:FieldObject.Value>
+                                          </isactr:FieldObject>
+                                          <isactr:FieldObject Name="Xminus_signElementsminus_signServiceminus_signProfile" Type="FieldArgument">
+                                            <isactr:FieldObject.Value>
+                                              <InArgument x:TypeArguments="x:String">high-capacity</InArgument>
+                                            </isactr:FieldObject.Value>
+                                          </isactr:FieldObject>
+                                          <isactr:FieldObject Name="out_text" Type="FieldArgument">
+                                            <isactr:FieldObject.Value>
+                                              <OutArgument x:TypeArguments="x:String">[marketanalysis]</OutArgument>
+                                            </isactr:FieldObject.Value>
+                                          </isactr:FieldObject>
+                                          <isactr:FieldObject Name="out_maskedText" Type="FieldArgument">
+                                            <isactr:FieldObject.Value>
+                                              <OutArgument x:TypeArguments="x:String" />
+                                            </isactr:FieldObject.Value>
+                                          </isactr:FieldObject>
+                                          <isactr:FieldObject Name="Jit_v2_sub_generateChatCompletion" Type="FieldArgument">
+                                            <isactr:FieldObject.Value>
+                                              <OutArgument x:TypeArguments="uiascb1:v2_sub_generateChatCompletion_Create" />
+                                            </isactr:FieldObject.Value>
+                                          </isactr:FieldObject>
+                                          <isactr:FieldObject Name="out_contextGroundingCitationsString" Type="FieldArgument">
+                                            <isactr:FieldObject.Value>
+                                              <OutArgument x:TypeArguments="x:String" />
+                                            </isactr:FieldObject.Value>
+                                          </isactr:FieldObject>
+                                        </isactr:ConnectorActivity.FieldObjects>
+                                      </isactr:ConnectorActivity>
+                                      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtSubscribers]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="521.6,1412" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+                                        <ui:ForEachRow.Body>
+                                          <ActivityAction x:TypeArguments="sd:DataRow">
+                                            <ActivityAction.Argument>
+                                              <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentSubscriber" />
+                                            </ActivityAction.Argument>
+                                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="520,1230.4" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                                              <Sequence.Variables>
+                                                <Variable x:TypeArguments="x:String" Name="MarketMatch" />
+                                              </Sequence.Variables>
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                              <If Condition="[CurrentSubscriber(&quot;Enabled&quot;).ToString.Trim.ToUpper = &quot;TRUE&quot;]" sap:VirtualizedContainerService.HintSize="486.4,1170.4" sap2010:WorkflowViewState.IdRef="If_4">
+                                                <If.Then>
+                                                  <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="484.8,951.2" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                    <Assign sap:VirtualizedContainerService.HintSize="451.2,174.4" sap2010:WorkflowViewState.IdRef="Assign_12">
+                                                      <Assign.To>
+                                                        <OutArgument x:TypeArguments="x:String">[MarketMatch]</OutArgument>
+                                                      </Assign.To>
+                                                      <Assign.Value>
+                                                        <InArgument x:TypeArguments="x:String">[If(marketanalysis.Contains(";"), marketanalysis.Split(";"c)(0).Replace("Relevant market:", "").Trim(), marketanalysis.Replace("Relevant market:", "").Trim())]</InArgument>
+                                                      </Assign.Value>
+                                                    </Assign>
+                                                    <If Condition="[CurrentSubscriber(&quot;PreferredDelivery&quot;).ToString.Trim.ToUpperInvariant = &quot;EMAIL&quot; AndAlso CurrentSubscriber(&quot;Email&quot;).ToString.Trim &lt;&gt; &quot;&quot; AndAlso (CurrentSubscriber(&quot;Interests&quot;).ToString.Trim.ToLowerInvariant = &quot;all markets&quot; OrElse CurrentSubscriber(&quot;Interests&quot;).ToString.Split(&quot;,&quot;c).Any(Function(i) i.Trim &lt;&gt; &quot;&quot; AndAlso (MarketMatch.ToLowerInvariant.Contains(i.Trim.ToLowerInvariant) OrElse i.Trim.ToLowerInvariant.Contains(MarketMatch.ToLowerInvariant)))) AndAlso Not (dtDelivery IsNot Nothing AndAlso dtDelivery.Columns.Contains(&quot;ArticleKey&quot;) AndAlso dtDelivery.Columns.Contains(&quot;RecipientEmail&quot;) AndAlso dtDelivery.Columns.Contains(&quot;DeliveryStatus&quot;) AndAlso dtDelivery.AsEnumerable().Any(Function(r) r(&quot;ArticleKey&quot;).ToString.Trim.ToLowerInvariant = articleKey.Trim.ToLowerInvariant AndAlso r(&quot;RecipientEmail&quot;).ToString.Trim.ToLowerInvariant = CurrentSubscriber(&quot;Email&quot;).ToString.Trim.ToLowerInvariant AndAlso r(&quot;DeliveryStatus&quot;).ToString.Trim.ToUpperInvariant = &quot;SENT&quot;))]" sap:VirtualizedContainerService.HintSize="451.2,716.8" sap2010:WorkflowViewState.IdRef="If_5">
+                                                      <If.Then>
+                                                        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="449.6,497.6" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                                                          <Sequence.Variables>
+                                                            <Variable x:TypeArguments="x:String" Name="smtpStatus" />
+                                                            <Variable x:TypeArguments="x:String" Name="smtpErrorDetails" />
+                                                          </Sequence.Variables>
+                                                          <sap:WorkflowViewStateService.ViewState>
+                                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                            </scg:Dictionary>
+                                                          </sap:WorkflowViewStateService.ViewState>
+                                                          <Assign sap:VirtualizedContainerService.HintSize="416,174.4" sap2010:WorkflowViewState.IdRef="Assign_SmtpStatusReset">
+                                                            <Assign.To>
+                                                              <OutArgument x:TypeArguments="x:String">[smtpStatus]</OutArgument>
+                                                            </Assign.To>
+                                                            <Assign.Value>
+                                                              <InArgument x:TypeArguments="x:String">[String.Empty]</InArgument>
+                                                            </Assign.Value>
+                                                          </Assign>
+                                                          <Assign sap:VirtualizedContainerService.HintSize="416,174.4" sap2010:WorkflowViewState.IdRef="Assign_SmtpErrorReset">
+                                                            <Assign.To>
+                                                              <OutArgument x:TypeArguments="x:String">[smtpErrorDetails]</OutArgument>
+                                                            </Assign.To>
+                                                            <Assign.Value>
+                                                              <InArgument x:TypeArguments="x:String">[String.Empty]</InArgument>
+                                                            </Assign.Value>
+                                                          </Assign>
+                                                          <TryCatch DisplayName="Send Outlook Mail" sap:VirtualizedContainerService.HintSize="416,590.4" sap2010:WorkflowViewState.IdRef="TryCatch_SmtpSend">
+                                                            <TryCatch.Try>
+                                                              <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="382.4,358.4" sap2010:WorkflowViewState.IdRef="Sequence_SmtpTry">
+                                                                <Sequence.Variables>
+                                                                  <Variable x:TypeArguments="x:String" Name="emailBody" />
+                                                                </Sequence.Variables>
+<Assign DisplayName="Build HTML Email Body" sap:VirtualizedContainerService.HintSize="348.8,174.4" sap2010:WorkflowViewState.IdRef="Assign_EmailBody">
+                                                                  <Assign.To>
+                                                                    <OutArgument x:TypeArguments="x:String">[emailBody]</OutArgument>
+                                                                  </Assign.To>
+                                                                  <Assign.Value>
+                                                                    <InArgument x:TypeArguments="x:String">[&quot;&lt;div style='margin:0;padding:0;background-color:#f4f7fb;font-family:Arial,Helvetica,sans-serif;color:#1f2937;'&gt;&lt;table role='presentation' width='100%' cellpadding='0' cellspacing='0' style='background-color:#f4f7fb;padding:24px 0;'&gt;&lt;tr&gt;&lt;td align='center'&gt;&lt;table role='presentation' width='640' cellpadding='0' cellspacing='0' style='width:100%;max-width:640px;background-color:#ffffff;border-radius:12px;overflow:hidden;border:1px solid #e5e7eb;'&gt;&lt;tr&gt;&lt;td style='background-color:#123b63;padding:24px 28px;'&gt;&lt;div style='font-size:12px;letter-spacing:1.5px;color:#b9d7f2;font-weight:bold;text-transform:uppercase;'&gt;NewsAlerts&lt;/div&gt;&lt;div style='font-size:26px;line-height:1.25;color:#ffffff;font-weight:bold;margin-top:8px;'&gt;Market News Alert&lt;/div&gt;&lt;div style='font-size:13px;color:#dbeafe;margin-top:8px;'&gt;Fresh article matched to your interests&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style='padding:28px;'&gt;&lt;div style='font-size:13px;color:#64748b;font-weight:bold;text-transform:uppercase;letter-spacing:.6px;'&gt;Headline&lt;/div&gt;&lt;div style='font-size:23px;line-height:1.35;color:#111827;font-weight:bold;margin:8px 0 22px 0;'&gt;&quot; &amp; System.Net.WebUtility.HtmlEncode(articleTitle) &amp; &quot;&lt;/div&gt;&lt;table role='presentation' width='100%' cellpadding='0' cellspacing='0' style='margin:0 0 22px 0;'&gt;&lt;tr&gt;&lt;td style='background-color:#eef6ff;border-left:4px solid #2563eb;padding:16px 18px;'&gt;&lt;div style='font-size:13px;color:#1d4ed8;font-weight:bold;margin-bottom:7px;'&gt;Summary&lt;/div&gt;&lt;div style='font-size:15px;line-height:1.6;color:#334155;'&gt;&quot; &amp; System.Net.WebUtility.HtmlEncode(articleSummary) &amp; &quot;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;div style='font-size:13px;color:#64748b;font-weight:bold;text-transform:uppercase;letter-spacing:.6px;margin-bottom:8px;'&gt;Market analysis&lt;/div&gt;&lt;div style='background-color:#f8fafc;border:1px solid #e5e7eb;border-radius:8px;padding:16px 18px;font-size:15px;line-height:1.65;color:#334155;white-space:pre-line;'&gt;&quot; &amp; System.Net.WebUtility.HtmlEncode(marketAnalysis) &amp; &quot;&lt;/div&gt;&lt;table role='presentation' width='100%' cellpadding='0' cellspacing='0' style='margin-top:22px;'&gt;&lt;tr&gt;&lt;td width='50%' valign='top' style='padding-right:12px;'&gt;&lt;div style='font-size:12px;color:#64748b;font-weight:bold;text-transform:uppercase;'&gt;Source&lt;/div&gt;&lt;div style='font-size:14px;color:#334155;margin-top:5px;'&gt;&quot; &amp; System.Net.WebUtility.HtmlEncode(CurrentRow(&quot;SourceName&quot;).ToString) &amp; &quot;&lt;/div&gt;&lt;/td&gt;&lt;td width='50%' valign='top' style='padding-left:12px;'&gt;&lt;div style='font-size:12px;color:#64748b;font-weight:bold;text-transform:uppercase;'&gt;Published&lt;/div&gt;&lt;div style='font-size:14px;color:#334155;margin-top:5px;'&gt;&quot; &amp; System.Net.WebUtility.HtmlEncode(articlePublished) &amp; &quot;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;table role='presentation' cellpadding='0' cellspacing='0' style='margin-top:26px;'&gt;&lt;tr&gt;&lt;td align='center' bgcolor='#1d4ed8' style='border-radius:7px;'&gt;&lt;a href='&quot; &amp; System.Net.WebUtility.HtmlEncode(articleLink) &amp; &quot;' style='display:inline-block;padding:13px 22px;font-size:15px;font-weight:bold;color:#ffffff;text-decoration:none;'&gt;Read full article&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;div style='font-size:11px;line-height:1.5;color:#94a3b8;margin-top:24px;'&gt;You received this alert because the article matched your configured interests.&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&quot;]</InArgument>
+                                                                  </Assign.Value>
+                                                                </Assign>
+                                                                <ui:SendOutlookMail Account="f.muthyalanagendra.prasad@fujitsu.com" Body="[emailBody]" ContinueOnError="False" DisplayName="Send Outlook Mail" IsBodyHtml="True" IsDraft="False" Subject="[If(System.Text.RegularExpressions.Regex.Replace(&quot;Market News Alert: &quot; &amp; articleTitle, &quot;[\u0000-\u001F\u007F\u0085\u2028\u2029]&quot;, &quot; &quot;).Trim().Length &gt; 200, System.Text.RegularExpressions.Regex.Replace(&quot;Market News Alert: &quot; &amp; articleTitle, &quot;[\u0000-\u001F\u007F\u0085\u2028\u2029]&quot;, &quot; &quot;).Trim().Substring(0, 200).Trim(), System.Text.RegularExpressions.Regex.Replace(&quot;Market News Alert: &quot; &amp; articleTitle, &quot;[\u0000-\u001F\u007F\u0085\u2028\u2029]&quot;, &quot; &quot;).Trim())]" To="[CurrentSubscriber(&quot;Email&quot;).ToString.Trim]" sap:VirtualizedContainerService.HintSize="348.8,226.4" sap2010:WorkflowViewState.IdRef="SendMail_Outlook_1" />
+<Assign DisplayName="Mark Outlook Send Successful">
+                                                                          <Assign.To><OutArgument x:TypeArguments="x:String">[smtpStatus]</OutArgument></Assign.To>
+                                                                          <Assign.Value><InArgument x:TypeArguments="x:String">[&quot;SENT&quot;]</InArgument></Assign.Value>
+                                                                        </Assign>
+                                                              </Sequence>
+                                                            </TryCatch.Try>
+                                                            <TryCatch.Catches>
+                                                              <Catch x:TypeArguments="s:Exception">
+                                                                <ActivityAction x:TypeArguments="s:Exception">
+                                                                  <ActivityAction.Argument>
+                                                                    <DelegateInArgument x:TypeArguments="s:Exception" Name="sendException" />
+                                                                  </ActivityAction.Argument>
+                                                                  <Sequence DisplayName="Catch" sap:VirtualizedContainerService.HintSize="382.4,164.8" sap2010:WorkflowViewState.IdRef="Sequence_SmtpCatch">
+                                                                    <Assign sap:VirtualizedContainerService.HintSize="348.8,174.4" sap2010:WorkflowViewState.IdRef="Assign_SmtpExceptionStatus">
+                                                                      <Assign.To>
+                                                                        <OutArgument x:TypeArguments="x:String">[smtpStatus]</OutArgument>
+                                                                      </Assign.To>
+                                                                      <Assign.Value>
+                                                                        <InArgument x:TypeArguments="x:String">[&quot;EXCEPTION&quot;]</InArgument>
+                                                                      </Assign.Value>
+                                                                    </Assign>
+                                                                    <Assign sap:VirtualizedContainerService.HintSize="348.8,174.4" sap2010:WorkflowViewState.IdRef="Assign_SmtpExceptionDetails">
+                                                                      <Assign.To>
+                                                                        <OutArgument x:TypeArguments="x:String">[smtpErrorDetails]</OutArgument>
+                                                                      </Assign.To>
+                                                                      <Assign.Value>
+                                                                        <InArgument x:TypeArguments="x:String">[sendException.ToString]</InArgument>
+                                                                      </Assign.Value>
+                                                                    </Assign>
+                                                                  </Sequence>
+                                                                </ActivityAction>
+                                                              </Catch>
+                                                            </TryCatch.Catches>
+                                                          </TryCatch>
+                                                          <If Condition="[Not String.IsNullOrWhiteSpace(smtpStatus) AndAlso smtpStatus.Trim.StartsWith(&quot;2&quot;)]" sap:VirtualizedContainerService.HintSize="416,650.4" sap2010:WorkflowViewState.IdRef="If_SmtpResult">
+                                                            <If.Then>
+                                                              <Sequence DisplayName="Sent" sap:VirtualizedContainerService.HintSize="382.4,211.2" sap2010:WorkflowViewState.IdRef="Sequence_SmtpSent">
+                                                                <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[New Object() {DateTime.Now.ToString(&quot;o&quot;), articleKey, CurrentSubscriber(&quot;SubscriberID&quot;).ToString, CurrentSubscriber(&quot;Email&quot;).ToString.Trim, MarketMatch, &quot;Sent&quot;, 1, &quot;&quot;}]" DataTable="[dtDelivery]" DisplayName="Record Outlook Sent" sap:VirtualizedContainerService.HintSize="348.8,211.2" sap2010:WorkflowViewState.IdRef="AddDataRow_SmtpSent" />
+                                                                <ui:LogMessage DisplayName="Log Email Sent" sap:VirtualizedContainerService.HintSize="348.8,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_EmailSent" Level="Info" Message="[&quot;EMAIL SENT: &quot; &amp; articleTitle &amp; &quot; | Subscriber: &quot; &amp; CurrentSubscriber(&quot;Email&quot;).ToString.Trim &amp; &quot; | Source: &quot; &amp; CurrentRow(&quot;SourceName&quot;).ToString]" />
+                                                              </Sequence>
+                                                            </If.Then>
+                                                            <If.Else>
+                                                              <Sequence DisplayName="Failed" sap:VirtualizedContainerService.HintSize="382.4,400" sap2010:WorkflowViewState.IdRef="Sequence_SmtpFailed">
+                                                                <If Condition="[String.IsNullOrWhiteSpace(smtpErrorDetails)]" sap:VirtualizedContainerService.HintSize="348.8,250.4" sap2010:WorkflowViewState.IdRef="If_SmtpErrorDetails">
+                                                                  <If.Then>
+                                                                    <Assign sap:VirtualizedContainerService.HintSize="315.2,174.4" sap2010:WorkflowViewState.IdRef="Assign_SmtpStatusDetails">
+                                                                      <Assign.To>
+                                                                        <OutArgument x:TypeArguments="x:String">[smtpErrorDetails]</OutArgument>
+                                                                      </Assign.To>
+                                                                      <Assign.Value>
+                                                                        <InArgument x:TypeArguments="x:String">[&quot;Outlook status: &quot; &amp; If(String.IsNullOrWhiteSpace(smtpStatus), &quot;No status returned&quot;, smtpStatus)]</InArgument>
+                                                                      </Assign.Value>
+                                                                    </Assign>
+                                                                  </If.Then>
+                                                                  <If.Else>
+                                                                    <Sequence DisplayName="Existing Error" sap:VirtualizedContainerService.HintSize="315.2,89.6" sap2010:WorkflowViewState.IdRef="Sequence_SmtpExistingError">
+                                                                      <sap:WorkflowViewStateService.ViewState>
+                                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                        </scg:Dictionary>
+                                                                      </sap:WorkflowViewStateService.ViewState>
+                                                                    </Sequence>
+                                                                  </If.Else>
+                                                                </If>
+                                                                <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[New Object() {DateTime.Now.ToString(&quot;o&quot;), articleKey, CurrentSubscriber(&quot;SubscriberID&quot;).ToString, CurrentSubscriber(&quot;Email&quot;).ToString.Trim, MarketMatch, &quot;Failed&quot;, 1, smtpErrorDetails}]" DataTable="[dtDelivery]" DisplayName="Record Outlook Failure" sap:VirtualizedContainerService.HintSize="348.8,211.2" sap2010:WorkflowViewState.IdRef="AddDataRow_SmtpFailed" />
+                                                                <ui:LogMessage DisplayName="Log Email Failed" sap:VirtualizedContainerService.HintSize="348.8,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_EmailFailed" Level="Error" Message="[&quot;EMAIL FAILED: &quot; &amp; articleTitle &amp; &quot; | Subscriber: &quot; &amp; CurrentSubscriber(&quot;Email&quot;).ToString.Trim &amp; &quot; | Error: &quot; &amp; smtpErrorDetails]" />
+                                                              </Sequence>
+                                                            </If.Else>
+                                                          </If>
+                                                        </Sequence>
+                                                      </If.Then>
+                                                      <If.Else>
+                                                        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="449.6,89.6" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                                                          <sap:WorkflowViewStateService.ViewState>
+                                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                            </scg:Dictionary>
+                                                          </sap:WorkflowViewStateService.ViewState>
+                                                        </Sequence>
+                                                      </If.Else>
+                                                    </If>
+                                                  </Sequence>
+                                                </If.Then>
+                                                <If.Else>
+                                                  <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="484.8,89.6" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                  </Sequence>
+                                                </If.Else>
+                                              </If>
+                                            </Sequence>
+                                          </ActivityAction>
+                                        </ui:ForEachRow.Body>
+                                      </ui:ForEachRow>
+                                      <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[New Object() {articleKey, CurrentRow(&quot;SourceID&quot;).ToString, CurrentRow(&quot;SourceName&quot;).ToString, articleTitle, articlePublished, articleLink, articleDescription, If(marketanalysis.Contains(&quot;;&quot;), marketanalysis.Split(&quot;;&quot;c)(0).Replace(&quot;Relevant market:&quot;, &quot;&quot;).Trim(), marketanalysis.Replace(&quot;Relevant market:&quot;, &quot;&quot;).Trim()), &quot;&quot;, &quot;&quot;, articleSummary, DateTime.Now.ToString(&quot;o&quot;), &quot;Processed&quot;, &quot;&quot;}]" DataTable="[dtProcessed]" DisplayName="Record Processed Article" sap:VirtualizedContainerService.HintSize="521.6,220" sap2010:WorkflowViewState.IdRef="AddDataRow_6" />
+                                      <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[New Object() {DateTime.Now.ToString(&quot;o&quot;), botStartTime.ToString(&quot;o&quot;), CurrentRow(&quot;SourceID&quot;).ToString, CurrentRow(&quot;SourceName&quot;).ToString, articleTitle, articleLink, dtDelivery.AsEnumerable().Count(Function(r) r(&quot;ArticleKey&quot;).ToString = articleKey), dtDelivery.AsEnumerable().Count(Function(r) r(&quot;ArticleKey&quot;).ToString = articleKey), dtDelivery.AsEnumerable().Count(Function(r) r(&quot;ArticleKey&quot;).ToString = articleKey AndAlso r(&quot;DeliveryStatus&quot;).ToString.Trim.ToUpperInvariant = &quot;SENT&quot;), dtDelivery.AsEnumerable().Count(Function(r) r(&quot;ArticleKey&quot;).ToString = articleKey AndAlso r(&quot;DeliveryStatus&quot;).ToString.Trim.ToUpperInvariant = &quot;FAILED&quot;), &quot;Processed&quot;, If(dtDelivery.AsEnumerable().Any(Function(r) r(&quot;ArticleKey&quot;).ToString = articleKey AndAlso r(&quot;DeliveryStatus&quot;).ToString.Trim.ToUpperInvariant = &quot;FAILED&quot;), String.Join(&quot; | &quot;, dtDelivery.AsEnumerable().Where(Function(r) r(&quot;ArticleKey&quot;).ToString = articleKey AndAlso r(&quot;DeliveryStatus&quot;).ToString.Trim.ToUpperInvariant = &quot;FAILED&quot;).Select(Function(r) r(&quot;ErrorDetails&quot;).ToString).Where(Function(e) e.Trim &lt;&gt; &quot;&quot;).Distinct()), &quot;&quot;)}]" DataTable="[dtAudit]" DisplayName="Record Audit" sap:VirtualizedContainerService.HintSize="521.6,211.2" sap2010:WorkflowViewState.IdRef="AddDataRow_7" />
+                                      <Assign DisplayName="Remember Processed Article Key" sap:VirtualizedContainerService.HintSize="521.6,174.4" sap2010:WorkflowViewState.IdRef="Assign_RememberProcessedArticleKey">
+                                        <Assign.To>
+                                          <OutArgument x:TypeArguments="scg:List(x:String)">[runProcessedArticleKeys]</OutArgument>
+                                        </Assign.To>
+                                        <Assign.Value>
+                                          <InArgument x:TypeArguments="scg:List(x:String)">[runProcessedArticleKeys.Concat(New String() {articleKey}).ToList()]</InArgument>
+                                        </Assign.Value>
+                                      </Assign>
+                                    </Sequence>
+                                  </If.Then>
+                                  <If.Else>
+                                    <Sequence DisplayName="Baseline Check" sap:VirtualizedContainerService.HintSize="555.2,770.4" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <If Condition="[isFirstRun AndAlso articleKey &lt;&gt; &quot;&quot; AndAlso dtProcessed IsNot Nothing AndAlso dtProcessed.Columns.Contains(&quot;ArticleKey&quot;) AndAlso Not dtProcessed.AsEnumerable().Any(Function(r) r(&quot;ArticleKey&quot;).ToString.Trim.ToLowerInvariant = articleKey)]" sap:VirtualizedContainerService.HintSize="521.6,710.4" sap2010:WorkflowViewState.IdRef="If_6">
+                                        <If.Then>
+                                          <Sequence DisplayName="Baseline" sap:VirtualizedContainerService.HintSize="449.6,491.2" sap2010:WorkflowViewState.IdRef="Sequence_26">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[New Object() {articleKey, CurrentRow(&quot;SourceID&quot;).ToString, CurrentRow(&quot;SourceName&quot;).ToString, articleTitle, articlePublished, articleLink, articleDescription, &quot;&quot;, &quot;&quot;, &quot;&quot;, &quot;&quot;, DateTime.Now.ToString(&quot;o&quot;), &quot;Baseline&quot;, &quot;&quot;}]" DataTable="[dtProcessed]" DisplayName="Record Baseline Article" sap:VirtualizedContainerService.HintSize="416,220" sap2010:WorkflowViewState.IdRef="AddDataRow_4" />
+                                            <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[New Object() {DateTime.Now.ToString(&quot;o&quot;), botStartTime.ToString(&quot;o&quot;), CurrentRow(&quot;SourceID&quot;).ToString, CurrentRow(&quot;SourceName&quot;).ToString, articleTitle, articleLink, 0, 0, 0, 0, &quot;Baseline&quot;, &quot;&quot;}]" DataTable="[dtAudit]" DisplayName="Record Baseline Audit" sap:VirtualizedContainerService.HintSize="416,211.2" sap2010:WorkflowViewState.IdRef="AddDataRow_5" />
+                                          </Sequence>
+                                        </If.Then>
+                                        <If.Else>
+                                          <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="449.6,89.6" sap2010:WorkflowViewState.IdRef="Sequence_27">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                          </Sequence>
+                                        </If.Else>
+                                      </If>
+                                    </Sequence>
+                                  </If.Else>
+                                </If>
+                              </Sequence>
+                            </ActivityAction>
+                          </ui:ForEach.Body>
+                        </ui:ForEach>
+                      </Sequence>
+                    </If.Then>
+                    <If.Else>
+                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="625.6,89.6" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </Sequence>
+                    </If.Else>
+                  </If>
+                </Sequence>
+              </ActivityAction>
+            </ui:ForEachRow.Body>
+          </ui:ForEachRow>
+          <ueab:ExcelApplicationCard CreateNewFile="False" DisplayName="Write Processed Articles" sap:VirtualizedContainerService.HintSize="662.4,500" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_7" ResizeWindow="None" WorkbookPath="Data\ProcessedArticles.xlsx">
+            <ueab:ExcelApplicationCard.Body>
+              <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="ExcelProcessedWrite" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,272" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ueab:WriteRangeX Destination="[ExcelProcessedWrite.Sheet(&quot;ProcessedArticles&quot;)]" DisplayName="Write Processed Articles" sap:VirtualizedContainerService.HintSize="416,212" sap2010:WorkflowViewState.IdRef="WriteRangeX_1" IgnoreEmptySource="True" Source="[dtProcessed]" />
+                </Sequence>
+              </ActivityAction>
+            </ueab:ExcelApplicationCard.Body>
+          </ueab:ExcelApplicationCard>
+          <ueab:ExcelApplicationCard CreateNewFile="False" DisplayName="Write Delivery Log" sap:VirtualizedContainerService.HintSize="662.4,500" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_8" ResizeWindow="None" WorkbookPath="Data\DeliveryLog.xlsx">
+            <ueab:ExcelApplicationCard.Body>
+              <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="ExcelDeliveryWrite" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,272" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ueab:WriteRangeX Destination="[ExcelDeliveryWrite.Sheet(&quot;DeliveryLog&quot;)]" DisplayName="Write Delivery Log" sap:VirtualizedContainerService.HintSize="416,212" sap2010:WorkflowViewState.IdRef="WriteRangeX_2" IgnoreEmptySource="True" Source="[dtDelivery]" />
+                </Sequence>
+              </ActivityAction>
+            </ueab:ExcelApplicationCard.Body>
+          </ueab:ExcelApplicationCard>
+          <ueab:ExcelApplicationCard CreateNewFile="False" DisplayName="Write Audit Log" sap:VirtualizedContainerService.HintSize="662.4,500" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_9" ResizeWindow="None" WorkbookPath="Data\AuditLog.xlsx">
+            <ueab:ExcelApplicationCard.Body>
+              <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="ExcelAuditWrite" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,272" sap2010:WorkflowViewState.IdRef="Sequence_25">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ueab:WriteRangeX Destination="[ExcelAuditWrite.Sheet(&quot;AuditLog&quot;)]" DisplayName="Write Audit Log" sap:VirtualizedContainerService.HintSize="416,212" sap2010:WorkflowViewState.IdRef="WriteRangeX_3" IgnoreEmptySource="True" Source="[dtAudit]" />
+                </Sequence>
+              </ActivityAction>
+            </ueab:ExcelApplicationCard.Body>
+          </ueab:ExcelApplicationCard>
+          <Assign sap:VirtualizedContainerService.HintSize="662.4,174.4" sap2010:WorkflowViewState.IdRef="Assign_15">
+            <Assign.To>
+              <OutArgument x:TypeArguments="x:Boolean">[isFirstRun]</OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+            </Assign.Value>
+          </Assign>
+          <Delay Duration="[TimeSpan.FromSeconds(60)]" sap:VirtualizedContainerService.HintSize="662.4,113.6" sap2010:WorkflowViewState.IdRef="Delay_1" />
+        </Sequence>
+      </ui:InterruptibleWhile.Body>
+    </ui:InterruptibleWhile>
+          </Sequence>
+        </ActivityAction>
+      </ueab:ExcelProcessScopeX.Body>
+    </ueab:ExcelProcessScopeX>
+  </Sequence>
+</Activity>
